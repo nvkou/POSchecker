@@ -19,7 +19,12 @@ namespace checker
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             agent = new Form1();
-            if(!agent.IsDisposed) Application.Run(agent);
+            try { 
+                if (!agent.IsDisposed) Application.Run(agent); 
+            } catch (Exception e) { 
+
+            }
+            
         }
     }
 }

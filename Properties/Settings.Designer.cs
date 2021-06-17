@@ -22,29 +22,5 @@ namespace checker.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string mou_folder {
-            get {
-                return ((string)(this["mou_folder"]));
-            }
-            set {
-                this["mou_folder"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string save_location {
-            get {
-                return ((string)(this["save_location"]));
-            }
-            set {
-                this["save_location"] = value;
-            }
-        }
     }
 }

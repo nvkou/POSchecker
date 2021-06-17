@@ -56,8 +56,9 @@ namespace checker
 
         private void loadSettiong()
         {
-            string mou_floder = Properties.Settings.Default.mou_folder;
-            string save_location = Properties.Settings.Default.save_location;
+            Configuation configuation = Configuation.Load();
+            string mou_floder = configuation?.mou_folder;
+            //string save_location = Properties.Settings.Default.save_location;
 
             try
             {
@@ -79,7 +80,10 @@ namespace checker
                         done = (result == DialogResult.OK && !string.IsNullOrEmpty(fbd.SelectedPath));
                     }
                     //loadpath(fbd.SelectedPath);
-                    Properties.Settings.Default.mou_folder = fbd.SelectedPath;
+                    //Properties.Settings.Default.mou_folder = fbd.SelectedPath;
+                    configuation.mou_folder = fbd.SelectedPath;
+                    mou_floder = fbd.SelectedPath;
+                    configuation.save();
 
                 }
                 Debug.WriteLine("mou folder loded");
@@ -97,7 +101,7 @@ namespace checker
                 //    Properties.Settings.Default.save_location = sa.SelectedPath;
                 //}
 
-                Properties.Settings.Default.Save();
+                //Properties.Settings.Default.Save();
 
             }
             loadpath(mou_floder);
