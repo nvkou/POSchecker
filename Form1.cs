@@ -80,6 +80,7 @@ namespace checker
                     }
                     //loadpath(fbd.SelectedPath);
                     Properties.Settings.Default.mou_folder = fbd.SelectedPath;
+                    mou_floder = fbd.SelectedPath;
 
                 }
                 Debug.WriteLine("mou folder loded");
