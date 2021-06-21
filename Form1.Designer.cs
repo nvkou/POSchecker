@@ -51,10 +51,10 @@ namespace checker
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(16, 52);
+            this.button1.Location = new System.Drawing.Point(11, 52);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 42);
+            this.button1.Size = new System.Drawing.Size(135, 42);
             this.button1.TabIndex = 0;
             this.button1.Text = "SKU/Model";
             this.button1.UseVisualStyleBackColor = true;
@@ -62,12 +62,12 @@ namespace checker
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(26, 98);
+            this.button2.Location = new System.Drawing.Point(11, 98);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 50);
+            this.button2.Size = new System.Drawing.Size(135, 50);
             this.button2.TabIndex = 1;
-            this.button2.Text = "StoreID";
+            this.button2.Text = "Store #";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -78,18 +78,18 @@ namespace checker
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 46);
             this.button3.TabIndex = 2;
-            this.button3.Text = "increment/unit";
+            this.button3.Text = "Utility $/unit";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(26, 207);
+            this.button4.Location = new System.Drawing.Point(11, 207);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(104, 54);
+            this.button4.Size = new System.Drawing.Size(135, 54);
             this.button4.TabIndex = 3;
-            this.button4.Text = "SalseCount";
+            this.button4.Text = "Quantity Sold";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -114,7 +114,7 @@ namespace checker
             // skulabel
             // 
             this.skulabel.AutoSize = true;
-            this.skulabel.Location = new System.Drawing.Point(150, 61);
+            this.skulabel.Location = new System.Drawing.Point(165, 63);
             this.skulabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.skulabel.Name = "skulabel";
             this.skulabel.Size = new System.Drawing.Size(82, 20);
@@ -124,7 +124,7 @@ namespace checker
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(150, 108);
+            this.label2.Location = new System.Drawing.Point(165, 108);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 20);

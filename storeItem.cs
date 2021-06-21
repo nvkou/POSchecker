@@ -19,7 +19,9 @@ namespace checker
             StoreID = storeID;
             StreetAddress = streetAddress;
             City = city;
-            this.zip = Convert.ToInt32(zip);
+            int dzip = 0;
+            int.TryParse(zip, out dzip);
+            this.zip = dzip;
             LEDBulbs = lEDBulbs;
             LEDFixture = lEDFixture;
             WaterSenseShowerHeads = waterSenseShowerHeads;

@@ -177,6 +177,7 @@ namespace checker
         {
             button5.Enabled = false;
             BContext.loadMOU(MOU_combo.SelectedValue.ToString());
+           
         }
         public void mstatus(string s) {
             moustatus_label.Text = s;
