@@ -28,22 +28,15 @@ namespace checker
         List<string> modelList = new List<string>();
 
         public Form1()
-        {
-            loadSettiong();
+        {         
             InitializeComponent();
+            loadSettiong();
             PrepareData();
         }
 
         private void PrepareData()
         {
             check_btn.Enabled = false;
-            var MOU_data = new BindingSource
-            {
-                DataSource = BContext.mous
-            };
-            MOU_combo.DataSource = MOU_data.DataSource;
-            MOU_combo.DisplayMember = "displayname";
-            MOU_combo.ValueMember = "fullpath";
             try {
                 oExcelApp = System.Runtime.InteropServices.Marshal.GetActiveObject("Excel.Application") as Microsoft.Office.Interop.Excel.Application;
                 POSattach.Text += oExcelApp.ActiveWorkbook.Name;
@@ -62,7 +55,7 @@ namespace checker
             try
             {
                 Path.GetFullPath(mou_floder);
-                Debug.WriteLine(mou_floder);
+               // Debug.WriteLine(mou_floder);
                 //Path.GetFullPath(save_location);
 
 
@@ -101,7 +94,19 @@ namespace checker
                 Properties.Settings.Default.Save();
 
             }
+            MOU_combo.Enabled = false;
+            MOU_combo.SelectedItem = null; 
             loadpath(mou_floder);
+            var MOU_data = new BindingSource
+            {
+                DataSource = BContext.mous
+            };
+
+            MOU_combo.DataSource = MOU_data.DataSource;
+            MOU_combo.DisplayMember = "displayname";
+            MOU_combo.ValueMember = "fullpath";
+            MOU_combo.Enabled = true;
+            this.Refresh();
         }
 
         private void loadpath(string path)
@@ -118,8 +123,9 @@ namespace checker
         private void button6_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Reset();
-            Properties.Settings.Default.Save();
-            MessageBox.Show("setting cleared. please restart checker ");
+            Properties.Settings.Default.Save();    
+            loadSettiong();
+            //MessageBox.Show("setting cleared. please restart checker ");
         }
 
         private void button1_Click(object sender, EventArgs e)

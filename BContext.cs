@@ -31,7 +31,7 @@ namespace checker
                 mous.Add(new Mou(s));
             }
             Debug.Print("mous size " + mous.Count);
-            Debug.Print(mous.First().displayname);
+            //Debug.Print(mous.First().displayname);
         }
 
         public static void loadMOU(string path) {
