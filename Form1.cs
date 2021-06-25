@@ -125,6 +125,7 @@ namespace checker
         private void button1_Click(object sender, EventArgs e)
         {
             Range temp = SelectRange("Please select SKU column (no heading)");
+            if (temp == null) return;
             skuList = RangeToList(temp);
             skulabel.Text = $"{skuList.Count} skus selected";
             checkInput();
@@ -134,7 +135,9 @@ namespace checker
 
         private Range SelectRange(string msg)
         {
-            return oExcelApp.InputBox(msg, "Range selector", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, 8);
+            dynamic re= oExcelApp.InputBox(msg, "Range selector", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, 8);
+            if (re is Range) return re;
+            return null;
         }
         List<string> RangeToList(Range inputRng)
         {
@@ -192,6 +195,7 @@ namespace checker
         private void button3_Click(object sender, EventArgs e)
         {
             Range temp = SelectRange("Please select unit price column (no heading)");
+            if (temp == null) return;
             unitPriceList = RangeToList(temp);
             label3.Text = $"{unitPriceList.Count} selected";
             checkInput();
@@ -200,6 +204,7 @@ namespace checker
         private void button4_Click(object sender, EventArgs e)
         {
             Range temp = SelectRange("Please select unit sold column (no heading)");
+            if (temp == null) return;
             unitSoldList = RangeToList(temp);
             label4.Text = $"{unitSoldList.Count} selected";
             checkInput();
@@ -208,6 +213,7 @@ namespace checker
         private void button2_Click(object sender, EventArgs e)
         {
             Range temp = SelectRange("Please select store ID column (no heading)");
+            if (temp == null) return;
             storeIDList = RangeToList(temp);
             label2.Text = $"{storeIDList.Count} selected";
             checkInput();
@@ -247,6 +253,9 @@ namespace checker
             check_btn.Text = "check completed";
         }
 
-        
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/nvkou/POSchecker");
+        }
     }
 }
