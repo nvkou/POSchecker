@@ -96,7 +96,7 @@ namespace checker
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(320, 52);
+            this.dateTimePicker1.Location = new System.Drawing.Point(286, 52);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(246, 26);
@@ -105,7 +105,7 @@ namespace checker
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(320, 108);
+            this.dateTimePicker2.Location = new System.Drawing.Point(286, 108);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(246, 26);
@@ -155,7 +155,7 @@ namespace checker
             // MOU_combo
             // 
             this.MOU_combo.FormattingEnabled = true;
-            this.MOU_combo.Location = new System.Drawing.Point(320, 157);
+            this.MOU_combo.Location = new System.Drawing.Point(286, 157);
             this.MOU_combo.Margin = new System.Windows.Forms.Padding(2);
             this.MOU_combo.MaximumSize = new System.Drawing.Size(410, 0);
             this.MOU_combo.MinimumSize = new System.Drawing.Size(328, 0);
@@ -176,12 +176,12 @@ namespace checker
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(639, -3);
+            this.button6.Location = new System.Drawing.Point(621, 152);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(118, 44);
+            this.button6.Size = new System.Drawing.Size(152, 37);
             this.button6.TabIndex = 12;
-            this.button6.Text = "clear setting";
+            this.button6.Text = "Reset MOU folder";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -218,7 +218,7 @@ namespace checker
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(583, 58);
+            this.label1.Location = new System.Drawing.Point(549, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 16;
@@ -228,7 +228,7 @@ namespace checker
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(583, 113);
+            this.label5.Location = new System.Drawing.Point(549, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 20);
             this.label5.TabIndex = 17;
